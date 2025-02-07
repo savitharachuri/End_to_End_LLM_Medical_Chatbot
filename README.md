@@ -1,7 +1,7 @@
 # End to End Medical Chatbot Generative AI
 
 
-# How to run?
+## Medical chatbot using OpenAI LLM model
 ### STEPS:
 
 Clone the repository
