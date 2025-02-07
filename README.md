@@ -2,53 +2,20 @@
 
 
 ## Medical chatbot using OpenAI LLM model
-### STEPS:
+### Project Description
+Developing a medical chatbot by leveraging the Retrieval-Augmented Generation (RAG) process to fine-tune OpenAI's LLM responses for improved accuracy and relevance. Additionally, designing a user-friendly interface to facilitate seamless interaction
 
-Clone the repository
+### Methodology
+- Pinecone Vector database API
+- Langchain
+- embedding model from hugging face
+- Open AI LLM model API
+- AWS Free Tier Service to store
+- Frontend using html 
 
-```bash
-Project repo: https://github.com/
-```
-### STEP 01- Create a conda environment after opening the repository
+### Interface
 
-```bash
-conda create -n medibot python=3.10 -y
-```
-
-```bash
-conda activate medibot
-```
-
-
-### STEP 02- install the requirements
-```bash
-pip install -r requirements.txt
-```
-
-
-### Create a `.env` file in the root directory and add your Pinecone & openai credentials as follows:
-
-```ini
-PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-OPENAI_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-```
-
-
-```bash
-# run the following command to store embeddings to pinecone
-python store_index.py
-```
-
-```bash
-# Finally run the following command
-python app.py
-```
-
-Now,
-```bash
-open up localhost:
-```
-
+<img width="709" alt="Screenshot 2025-02-07 at 11 35 52 AM" src="https://github.com/user-attachments/assets/cdb5de93-5251-4184-9e39-809c7f4802d5" />
 
 ### Techstack Used:
 
@@ -91,42 +58,5 @@ open up localhost:
 	2. AmazonEC2FullAccess
 
 	
-## 3. Create ECR repo to store/save docker image
-    - Save the URI: 970547337635.dkr.ecr.ap-south-1.amazonaws.com/medicalchatbot
-
-	
-## 4. Create EC2 machine (Ubuntu) 
-
-## 5. Open EC2 and Install docker in EC2 Machine:
-	
-	
-	#optinal
-
-	sudo apt-get update -y
-
-	sudo apt-get upgrade
-	
-	#required
-
-	curl -fsSL https://get.docker.com -o get-docker.sh
-
-	sudo sh get-docker.sh
-
-	sudo usermod -aG docker ubuntu
-
-	newgrp docker
-	
-# 6. Configure EC2 as self-hosted runner:
-    setting>actions>runner>new self hosted runner> choose os> then run command one by one
-
-
-# 7. Setup github secrets:
-
-   - AWS_ACCESS_KEY_ID
-   - AWS_SECRET_ACCESS_KEY
-   - AWS_DEFAULT_REGION
-   - ECR_REPO
-   - PINECONE_API_KEY
-   - OPENAI_API_KEY
 
     
